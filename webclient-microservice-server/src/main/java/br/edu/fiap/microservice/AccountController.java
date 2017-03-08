@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AccountController {
-
+	
 	@Autowired
 	AccountRepository accountRepository;
 	
@@ -16,17 +16,15 @@ public class AccountController {
 	public String home(){
 		return "index";
 	}
-	
 	@RequestMapping("/accountList")
-	public String accountList(Model model){
-		model.addAttribute("accounts",accountRepository.getAllAccounts());
+	public String accountList(Model model) {
+		model.addAttribute("accounts", accountRepository.getAllAccounts());
 		return "accountList";
 	}
 	
 	@RequestMapping("/accountDetails")
-	public String accountDetails(@RequestParam("number") String id, Model model){
-		model.addAttribute("account",accountRepository.getAccount(id));
+	public String accountDetails(@RequestParam("number") String id, Model model) {
+		model.addAttribute("account", accountRepository.getAccount(id));
 		return "accountDetails";
 	}
-	
 }
