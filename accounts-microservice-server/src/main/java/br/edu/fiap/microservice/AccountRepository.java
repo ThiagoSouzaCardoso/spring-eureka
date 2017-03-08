@@ -2,16 +2,10 @@ package br.edu.fiap.microservice;
 
 import java.util.List;
 
-public class AccountRepository {
+public interface AccountRepository {
 
-	public List<Account> getAllAccounts() {
+	public List<Account> getAllAccounts();
 
-		return null;
-	}
-
-	public Account getAccount(String id) {
-
-		return null;
-	}
+	public Account getAccount(String id);
 
 }
