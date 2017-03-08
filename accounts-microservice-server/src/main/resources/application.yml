@@ -1,0 +1,20 @@
+### Spring Properties
+# Service registers under this name
+spring:
+  application:
+    name: accounts-microservice
+
+# Discovery Server Access
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:11111/eureka 
+
+# HTTP Servers (Tomcat) Port    
+server:
+  port: 2222
+
+# Disable Spring boot's "whitelabel" default error page, so we can use our own  
+  error:
+    whitelabel:
+      enabled: false
